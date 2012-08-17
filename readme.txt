@@ -1,5 +1,5 @@
 === WordPress Goodreads Bookshelf ===
-Contributors: blobaugh, whispert
+Contributors: blobaugh, freshmuse, whispert
 Tags: goodreads, books, sidebar, widget, shortcode, review
 Requires at least: 3.0
 Tested up to: 3.4.1
