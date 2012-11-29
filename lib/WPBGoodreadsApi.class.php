@@ -6,7 +6,7 @@ class WPBGoodreadsApi  {
     
 
     private function get( $Url ) {
-        $response = wp_remote_get($Url);
+        $response = wp_remote_get($Url, array( 'timeout' => '20' ));
         $body = wp_remote_retrieve_body($response);
         $body = json_encode( simplexml_load_string( $body ) );
         $body = json_decode( $body, true );
@@ -34,7 +34,6 @@ class WPBGoodreadsApi  {
         $url .= '&id=' . $Args['id'];
         $url .= '&shelf=' . $Args['shelf'];
         $url .= '&per_page=' . $Args['per_page'];
-        
         $shelf = $this->get( $url );
         $shelf = $shelf['reviews']['review'];
         
